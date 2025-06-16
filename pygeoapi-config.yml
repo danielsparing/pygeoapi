@@ -330,14 +330,13 @@ resources:
               name: Parquet
               data:
                 source: s3://[redacted]/part-00000-[redacted].snappy.parquet
-              id_field: id
-              time_field: time
+              id_field: row_number
               x_field:
-              - -180
-              - 180
+              - xmin
+              - xmax
               y_field:
-              - -90
-              - 90
+              - ymin
+              - ymax
 
     hello-world:
         type: process
